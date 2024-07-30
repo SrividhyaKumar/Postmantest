@@ -90,7 +90,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "{{Baseurl}}/user/11"
+				"url": "{{Baseurl}}/user/110"
 			},
 			"response": []
 		},
