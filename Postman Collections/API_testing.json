@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "2f5cf00c-4af5-4770-9004-cf995b3d38d8",
+		"name": "API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll Users",
+			"id": "b203a96a-2d12-45aa-b437-362d9b66aed2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "userapi123",
+						"username": "Numpy@gmail.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Baseurl}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Usersbyfirstname",
+			"id": "0aed44f1-8701-4df9-bb3f-5f4773299d79",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "userapi123",
+						"username": "Numpy@gmail.com"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{Baseurl}}/deleteuser/username/Postman"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete UsersbyID",
+			"id": "9f65a2bc-10fd-43b4-ba6f-d28a03d04ffc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "userapi123",
+						"username": "Numpy@gmail.com"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{Baseurl}}/deleteuser/"
+			},
+			"response": []
+		},
+		{
+			"name": "GetuserbyID",
+			"id": "03917942-e381-4752-acca-c9e58d2a0cb9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "userapi123",
+						"username": "Numpy@gmail.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{Baseurl}}/user/11222"
+			},
+			"response": []
+		},
+		{
+			"name": "createusers Copy",
+			"id": "02897dc5-a5d3-4b3e-b820-71c40c1f79e4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "userapi123",
+						"username": "Numpy@gmail.com"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_first_name\":\"Sr\",\r\n\"user_last_name\":\"vidhya\",\r\n\"user_contact_number\":\"4696645670\",\r\n\"user_email_id\":\"vidhya8@gmail.com\",\r\n\r\n\"userAddress\":{\r\n\"plotNumber\":\"K4-100\",\r\n\"street\":\"vail\",\r\n\"state\":\"NJ\",\r\n\"country\":\"USA\",\r\n\"zipCode\":\"07054\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Baseurl}}/createusers"
+			},
+			"response": []
+		},
+		{
+			"name": "Getuserbyfirstname",
+			"id": "38d66a0f-5949-4614-8030-88dfa4b53f9a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "userapi123",
+						"username": "Numpy@gmail.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{Baseurl}}/users/username/"
+			},
+			"response": []
+		},
+		{
+			"name": "Updateuser",
+			"id": "c3212587-2f8d-4857-8a24-7e90241ea2e5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "userapi123",
+						"username": "Numpy@gmail.com"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_first_name\":\"Sri\",\r\n\"user_last_name\":\"vidhya\",\r\n\"user_contact_number\":\"4696645670\",\r\n\"user_email_id\":\"vidhya8@gmail.com\",\r\n\r\n\"userAddress\":{\r\n\"plotNumber\":\"K4-100\",\r\n\"street\":\"vail\",\r\n\"state\":\"NJ\",\r\n\"country\":\"USA\",\r\n\"zipCode\":\"07054\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{Baseurl}}/updateuser/"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "userapi123",
+			"username": "Numpy@gmail.com"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f648e187-8e8c-45ff-9d6c-36c473c3c63f",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "447ebb9d-84d0-4d0d-9325-87b79551ea0b",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Baseurl",
+			"value": "https://userserviceapi-a54ceee3346a.herokuapp.com/uap"
+		}
+	]
+}
